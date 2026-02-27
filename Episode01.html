@@ -1,42 +1,49 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <script src="https://unpkg.com/vue@3"></script>
-  </head>
-  <body>
-    <div id="app">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-      <p>
-        <input type="text" v-model="greeting">
-      </p>
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
 
-      {{ greeting }} {{ greeting.length}}
+<body>
+  <div id="app">
 
-    </div>
+    <p>
+      <input type="text" v-model.lazy="greeting" placeholder="v-model.lazy">
+      <input type="text" v-model.number="greeting" placeholder="v-model.number">
+      <input type="text" v-model.trim="greeting" placeholder="v-model.trim">
+    </p>
 
-    <script>
-      Vue.createApp({
-        data() {
+    {{ greeting }}
+    {{ greeting.length}}
+    {{ typeof greeting }}
 
-            return{
-              greeting:'Hello World!'
-            };
-        },
+  </div>
 
-        mounted(){
+  <script>
+    Vue.createApp({
+      data() {
 
-          setTimeout(()=>{
+        return {
+          greeting: 'Hello World!'
+        };
+      },
 
-            this.greeting ='Hello India!'
+      mounted() {
 
-          },3000);
+        setTimeout(() => {
 
-        }
+          this.greeting = 'Hello India!'
 
-      }).mount("#app");
-    </script>
-  </body>
+        }, 3000);
+
+      }
+
+    }).mount("#app");
+  </script>
+</body>
+
 </html>
