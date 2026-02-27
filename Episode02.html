@@ -29,6 +29,11 @@
       <!-- <button type="button" :class="active ? 'text-red' : 'text-green'" :onclick="toggle">Click me</button> -->
       <button type="button" :class="active ? 'text-red' : 'text-green'" @click="toggle">Click me</button>
 
+      <h1 v-if="active">Vue is awesome!</h1>
+
+      <h1 v-else>Oh no 😢</h1>
+
+
     </div>
 
     <script>
