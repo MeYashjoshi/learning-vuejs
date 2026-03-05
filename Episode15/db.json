@@ -1,0 +1,9 @@
+{
+    "assignments":[
+        { "name": "Finish Project 101", "complete": true, "id": 1, "tag": "On going" },
+        { "name": "Finish Project 102", "complete": true, "id": 2, "tag": "Pendding" },
+        { "name": "Finish Project 103", "complete": false,"id": 3, "tag": "Open" },
+        { "name": "Finish Project 104", "complete": true, "id": 4, "tag": "Pendding" },
+        { "name": "Finish Project 105", "complete": false, "id": 5, "tag": "Close" }
+    ]
+}
